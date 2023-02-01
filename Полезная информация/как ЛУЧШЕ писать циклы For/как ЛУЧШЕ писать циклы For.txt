@@ -1,0 +1,50 @@
+видео https://www.youtube.com/watch?v=HIWfeIHocUc
+####################################
+1) использовать функцию sum()
+-------плохой код:
+result = 0
+numbers = [num for num in range(1_000_000)] #заполнение массива
+
+    for num in numbers:
+        result += num
+print(result)
+-------хороший код:
+numbers = [num for num in range(1_000_000)]
+    print(sum(numbers))
+######################################
+2) использовать функцию enumerate() в место len() для того чтобы вытащить индексы
+-------плохой код:
+    temp = 0
+    numbers = [num for num in range(1_000_000)]
+
+    for num in range(len(numbers)):
+        temp = numbers[num]
+    print(temp)
+-------хороший код:
+    temp = 0
+    numbers = [num for num in range(1_000_000)]
+
+    for index, num in enumerate(numbers):
+        temp = num
+    print(temp)
+######################################
+3)когда нужно пробежаться по двум спискам лучше использовать  zip()
+-------плохой код:
+    res = 0
+    a = [num for num in range(1_000_000)]
+    b = [num for num in range(1_000_000)]
+
+    for index in range(len(a)):
+        res = a[index] + b[index]
+    print(res)
+-------хороший код:
+    res = 0
+    a = [num for num in range(1_000_000)]
+    b = [num for num in range(1_000_000)]
+
+    for a_val, b_val in zip(a, b):
+        res = a_val + b_val
+    print(res)
+4)
+-------плохой код:
+-------хороший код:

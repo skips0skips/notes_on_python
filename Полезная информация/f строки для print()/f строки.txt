@@ -1,0 +1,50 @@
+f строки - formatted string
+Эти строки улучшают читаемость кода, а также работают быстрее чем другие способы форматирования.
+f-строки заметно быстрее чем % и str.format() форматирования. 
+https://python-scripts.com/f-strings  
+-------------------------------------------пример1
+var1 = 10
+var2 = 20
+print(f"Твой текст: {var1}, {var2}")
+-------------------------------------------пример2
+Так как f-строки оцениваются по мере выражения, вы можете внести любую или все доступные выражения Python в них.
+print(f"{2 * 37}")
+# Вывод: '74'
+-------------------------------------------пример3
+Также вы можете вызывать функции.
+def to_lowercase(input):
+    return input.lower()
+ 
+name = "Eric Idle"
+ 
+print(f"{to_lowercase(name)} is funny.")
+# Вывод: 'eric idle is funny.'
+-------------------------------------------пример4
+У вас могут быть многострочные f-strings:
+name = "Eric"
+profession = "comedian"
+affiliation = "Monty Python"
+ 
+message = (
+    f"Hi {name}. "
+    f"You are a {profession}. "
+    f"You were in {affiliation}."
+)
+ 
+print(message)
+# Вывод: 'Hi Eric. You are a comedian. You were in Monty Python.'
+-----------------------------------------пример5
+Если вы хотите размножить строки по нескольким линиям, у вас также есть возможность избежать возвратов при помощи \:
+message = f"Hi {name}. " \
+          f"You are a {profession}. " \
+          f"You were in {affiliation}."
+ 
+print(message)
+# Вывод: 'Hi Eric. You are a comedian. You were in Monty Python.'
+-----------------------------------------пример6
+при работе со словарями Python. Вы можете вставить значение словаря по его ключу, но сам ключ нужно вставлять 
+в одиночные кавычки внутри f-строки. Сама же f-строка должна иметь двойные кавычки.
+comedian = {'name': 'Eric Idle', 'age': 74}
+print(f"The comedian is {comedian['name']}, aged {comedian['age']}.")
+# Вывод: The comedian is Eric Idle, aged 74.
+

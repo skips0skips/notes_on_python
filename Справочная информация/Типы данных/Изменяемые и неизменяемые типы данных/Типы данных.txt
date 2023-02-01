@@ -1,0 +1,10 @@
+
+
+
+
+К изменяемым типам данных в Python относят: list, dict, set и пользовательские классы. 
+К неизменяемым: int, float, decimal, bool, string, tuple, range, frozenset.
+
+
+
+
