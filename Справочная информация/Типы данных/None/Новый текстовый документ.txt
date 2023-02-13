@@ -1,2 +1,9 @@
 https://dvsemenov.ru/tip-dannyx-none-v-python-chto-eto-i-kak-primenyaetsya/ - сайт с примерами и объяснениями 
 книга страница 68 - Python_Express-kurs_3-e_iz_-_Naomi_Seder_2019 
+
+# Рекомендуемый метод сравнения.
+a = None
+if a is None:
+    print("a - None.")
+else:
+    print("a = не None.")
